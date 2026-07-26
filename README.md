@@ -77,8 +77,6 @@ ollama pull llama3.2
 docker compose up -d
 ```
 
-<img width="1576" height="904" alt="docker compose ps output" src="https://github.com/user-attachments/assets/3c58d109-1b3d-4960-9703-097d005e86a1" />
-
 This starts Cowrie listening on `localhost:2222` (fake SSH) and writes logs to
 `./cowrie-data/log/cowrie.json` on the host, which `monitor.py` reads.
 
@@ -126,14 +124,6 @@ Once the session ends (or times out), `monitor.py` will:
 1. Detect the closed session in `cowrie.json`
 2. Send the session details to Ollama for analysis
 3. Post a formatted incident report to your Telegram chat, e.g.:
-
-```
-🚨 Security Incident Detected
-
-🟠 Threat Level: High
-Source IP: 203.0.113.5
-Session: abc123
-
 
 ![Uploading The Telegram alert itself.png…]()
 
