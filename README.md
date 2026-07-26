@@ -16,7 +16,7 @@ Kali VM (attacker) --SSH--> Cowrie (Docker) --logs--> cowrie.json
 ```
 
 
-<img width="2720" height="3008" alt="ai_soc_architecture" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
+<img width="600"  alt="ai_soc_architecture" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
 
 
 ## 1. Prerequisites
@@ -76,6 +76,8 @@ ollama pull llama3.2
 ```bash
 docker compose up -d
 ```
+
+<img width="1576" height="904" alt="docker compose ps output" src="https://github.com/user-attachments/assets/3c58d109-1b3d-4960-9703-097d005e86a1" />
 
 This starts Cowrie listening on `localhost:2222` (fake SSH) and writes logs to
 `./cowrie-data/log/cowrie.json` on the host, which `monitor.py` reads.
