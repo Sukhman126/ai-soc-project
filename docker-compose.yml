@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  cowrie:
+    image: cowrie/cowrie:latest
+    container_name: cowrie-honeypot
+    restart: unless-stopped
+    ports:
+      # Expose Cowrie's fake SSH service on host port 2222
+      - "2222:2222"
+      # Optional: Cowrie's fake telnet service
+      - "2223:2223"
+    volumes:
+      # Persist logs to the host so monitor.py can read cowrie.json
+      - ./cowrie-data/log:/cowrie/cowrie-git/var/log/cowrie
+      - ./cowrie-data/dl:/cowrie/cowrie-git/var/lib/cowrie/downloads
+    networks:
+      - soc-net
+
+networks:
+  soc-net:
+    driver: bridge
