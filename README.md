@@ -119,22 +119,11 @@ Once the session ends (or times out), `monitor.py` will:
 3. Post a formatted incident report to your Telegram chat, e.g.:
 
 <!-- Replace src below with your actual uploaded Telegram screenshot URL once the upload finishes -->
-<img width="500" alt="Telegram incident alert" src="PASTE_YOUR_TELEGRAM_SCREENSHOT_URL_HERE" />
 
-```
-🚨 Security Incident Detected
 
-Threat Level: High
 
-Summary:
-Attacker brute-forced SSH credentials, logged in as root,
-and inspected system files.
+<img width="753" height="804" alt="The Telegram alert itself" src="https://github.com/user-attachments/assets/09912028-ca1e-4b15-973b-c92b470f989e" />
 
-MITRE ATT&CK: T1110 Brute Force
-
-Recommendation:
-Block source IP and enforce key-based SSH auth.
-```
 
 ## 4. How it works (file by file)
 
