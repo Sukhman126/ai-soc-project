@@ -104,7 +104,7 @@ You should see:
 
 
 
-<img width="704" height="269" alt="Terminal running monitor py" src="https://github.com/user-attachments/assets/c038f98e-af7f-40f6-8d4d-d8e7d57c8bea" />
+<img width="600" height="269" alt="Terminal running monitor py" src="https://github.com/user-attachments/assets/c038f98e-af7f-40f6-8d4d-d8e7d57c8bea" />
 
 
 ## 3. Generating a test attack
