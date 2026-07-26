@@ -15,9 +15,7 @@ Kali VM (attacker) --SSH--> Cowrie (Docker) --logs--> cowrie.json
                                                  Security Administrator
 ```
 
-
-<img width="600"  alt="ai_soc_architecture" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
-
+<img width="600" alt="AI SOC architecture diagram" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
 
 ## 1. Prerequisites
 
@@ -99,11 +97,7 @@ You should see:
 [monitor] Monitoring ./cowrie-data/log/cowrie.json every 5s ...
 ```
 
-
-
-
-<img width="600" height="269" alt="Terminal running monitor py" src="https://github.com/user-attachments/assets/c038f98e-af7f-40f6-8d4d-d8e7d57c8bea" />
-
+<img width="600" height="269" alt="Terminal running monitor.py" src="https://github.com/user-attachments/assets/c038f98e-af7f-40f6-8d4d-d8e7d57c8bea" />
 
 ## 3. Generating a test attack
 
@@ -116,8 +110,7 @@ ssh root@<docker-host-ip> -p 2222
 Enter any username/password — Cowrie will accept it as a fake login, log the
 session, and let the "attacker" run commands in a sandboxed fake filesystem.
 
-
-<img width="775" height="429" alt="The SSH attack in progress" src="https://github.com/user-attachments/assets/b4226e7f-a1da-4478-95ed-1a57e15938a4" />
+<img width="775" height="429" alt="SSH attack in progress against the honeypot" src="https://github.com/user-attachments/assets/b4226e7f-a1da-4478-95ed-1a57e15938a4" />
 
 Once the session ends (or times out), `monitor.py` will:
 
@@ -125,8 +118,13 @@ Once the session ends (or times out), `monitor.py` will:
 2. Send the session details to Ollama for analysis
 3. Post a formatted incident report to your Telegram chat, e.g.:
 
-![Uploading The Telegram alert itself.png…]()
+<!-- Replace src below with your actual uploaded Telegram screenshot URL once the upload finishes -->
+<img width="500" alt="Telegram incident alert" src="PASTE_YOUR_TELEGRAM_SCREENSHOT_URL_HERE" />
 
+```
+🚨 Security Incident Detected
+
+Threat Level: High
 
 Summary:
 Attacker brute-forced SSH credentials, logged in as root,
