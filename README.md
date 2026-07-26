@@ -3,17 +3,6 @@
 Automatically detects, analyzes, and reports attacks against an SSH honeypot
 using Cowrie, a local LLM (via Ollama), and Telegram alerts.
 
-```
-Kali VM (attacker) --SSH--> Cowrie (Docker) --logs--> cowrie.json
-                                                          |
-                                                     monitor.py
-                                                          |
-                                                    Ollama (llama3.2)
-                                                          |
-                                                    Telegram Bot API
-                                                          |
-                                                 Security Administrator
-```
 
 <img width="600" alt="AI SOC architecture diagram" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
 
