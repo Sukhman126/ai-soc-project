@@ -15,6 +15,10 @@ Kali VM (attacker) --SSH--> Cowrie (Docker) --logs--> cowrie.json
                                                  Security Administrator
 ```
 
+
+<img width="2720" height="3008" alt="ai_soc_architecture" src="https://github.com/user-attachments/assets/a7c3fe25-da29-496e-b9ef-281c73351be6" />
+
+
 ## 1. Prerequisites
 
 - Docker Desktop (or Docker Engine) installed and running
@@ -95,6 +99,12 @@ You should see:
 [monitor] Monitoring ./cowrie-data/log/cowrie.json every 5s ...
 ```
 
+
+
+
+<img width="704" height="269" alt="Terminal running monitor py" src="https://github.com/user-attachments/assets/c038f98e-af7f-40f6-8d4d-d8e7d57c8bea" />
+
+
 ## 3. Generating a test attack
 
 From another machine (e.g. a Kali VM) or the same host:
@@ -105,6 +115,10 @@ ssh root@<docker-host-ip> -p 2222
 
 Enter any username/password — Cowrie will accept it as a fake login, log the
 session, and let the "attacker" run commands in a sandboxed fake filesystem.
+
+
+<img width="775" height="429" alt="The SSH attack in progress" src="https://github.com/user-attachments/assets/b4226e7f-a1da-4478-95ed-1a57e15938a4" />
+
 Once the session ends (or times out), `monitor.py` will:
 
 1. Detect the closed session in `cowrie.json`
@@ -117,6 +131,10 @@ Once the session ends (or times out), `monitor.py` will:
 🟠 Threat Level: High
 Source IP: 203.0.113.5
 Session: abc123
+
+
+![Uploading The Telegram alert itself.png…]()
+
 
 Summary:
 Attacker brute-forced SSH credentials, logged in as root,
